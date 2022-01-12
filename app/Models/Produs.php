@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Producator extends Model
+class Produs extends Model
 {
     use HasFactory;
-    protected $table = "Producatori";
+    protected $table = "Produse";
 
-    public function produse()
+    public function producator()
     {
-        return $this->belongsTo(Produs::class);
+        return $this->hasOne(Producator::class);
     }
 }

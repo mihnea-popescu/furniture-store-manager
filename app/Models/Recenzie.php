@@ -15,4 +15,9 @@ class Recenzie extends Model
     {
         return $this->hasOne(Client::class);
     }
+
+    public function produs()
+    {
+        return $this->hasOne(Produs::class);
+    }
 }

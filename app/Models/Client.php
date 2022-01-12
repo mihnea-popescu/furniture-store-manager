@@ -14,4 +14,8 @@ class Client extends Model
     {
         return $this->belongsTo(Comanda::class);
     }
+
+    public function recenzii() {
+        return $this->belongsTo(Recenzie::class);
+    }
 }
