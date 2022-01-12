@@ -10,4 +10,9 @@ class Angajat extends Model
     use HasFactory;
 
     protected $table = "angajati";
+
+    public function comenzi()
+    {
+        return $this->belongsTo(Comanda::class);
+    }
 }
