@@ -9,4 +9,14 @@ class Comanda extends Model
 {
     use HasFactory;
     protected $table = "Comenzi";
+
+    public function angajat()
+    {
+        return $this->hasOne(Angajat::class);
+    }
+
+    public function curier()
+    {
+        return $this->hasOne(Curier::class);
+    }
 }
