@@ -34,5 +34,8 @@ class CreateCuriersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('curieri');
+        Schema::table('comenzi', function (Blueprint $table) {
+            Schema::dropColumn('ID_Curier');
+        })
     }
 }

@@ -19,4 +19,9 @@ class Comanda extends Model
     {
         return $this->hasOne(Curier::class);
     }
+
+    public function client()
+    {
+        return $this->hasOne(Client::class);
+    }
 }
