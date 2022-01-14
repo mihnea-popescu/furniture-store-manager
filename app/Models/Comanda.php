@@ -24,4 +24,9 @@ class Comanda extends Model
     {
         return $this->hasOne(Client::class);
     }
+
+    public function produse()
+    {
+        return $this->belongstoMany(Produs::class,'produse_comenzi');
+    }
 }

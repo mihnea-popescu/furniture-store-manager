@@ -14,4 +14,8 @@ class Produs extends Model
     {
         return $this->hasOne(Producator::class);
     }
+
+    public function comenzi() {
+        return $this->belongsToMany(Comanda::class,'produse_comenzi');
+    }
 }
