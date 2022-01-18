@@ -15,4 +15,9 @@ class Angajat extends Model
     {
         return $this->belongsTo(Comanda::class);
     }
+
+    public function functie()
+    {
+        return $this->hasOne(Functie::class);
+    }
 }
