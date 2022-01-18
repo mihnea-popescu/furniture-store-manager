@@ -13,6 +13,6 @@ class Functie extends Model
 
     public function angajati()
     {
-        return $this->belongsTo(Client::class);
+        return $this->belongsTo(Angajat::class);
     }
 }
