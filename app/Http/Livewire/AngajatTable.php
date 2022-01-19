@@ -37,8 +37,19 @@ class AngajatTable extends DataTableComponent
         ];
     }
 
+        public function rowView(): string
+    {
+        // Becomes /resources/views/location/to/my/row.blade.php
+        return 'rowuri.rowangajat';
+    }
+
     public function query(): Builder
     {
         return Angajat::query();
+    }
+
+    public function delete($id) {
+        $angajat = Angajat::find($id);
+        $angajat->delete();
     }
 }
