@@ -4,6 +4,7 @@
 
 <div class="row">
   <div class="col">
+    
     <div class="card">
       <!-- Card header -->
       <div class="card-header border-0">
@@ -11,11 +12,10 @@
       </div>
       <!-- Light table -->
       <div class="table-responsive">
-        @livewire('angajati-table',[
-            'angajati' => $angajati,
-        ])
+        <livewire:angajat-table />
       </div>
       <!-- Card footer -->
+      {{--
       <div class="card-footer py-4">
         <nav aria-label="...">
           <ul class="pagination justify-content-end mb-0">
@@ -40,8 +40,8 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <livewire:angajat-table />
+      </div> --}}
+      
     </div>
   </div>
 </div>
