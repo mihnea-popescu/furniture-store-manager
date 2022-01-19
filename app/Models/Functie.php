@@ -9,10 +9,13 @@ class Functie extends Model
 {
     use HasFactory;
 
-    protected $table = "Functii";
+    protected $table = 'functii';
+    protected $primaryKey = 'ID_Functie';
+    protected $fillable = ['Nume','Departament','Salariu'];
+    //protected $keyType = 'bigint';
 
     public function angajati()
     {
-        return $this->belongsTo(Angajat::class);
+        return $this->hasMany(Angajat::class);
     }
 }

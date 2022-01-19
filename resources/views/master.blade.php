@@ -16,6 +16,12 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+
+  @livewireStyles
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
+
 </head>
 
 <body>
@@ -33,6 +39,12 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="{{ route('angajati') }}">
+              <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Angajati</span>
+            </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard.html">
                 <i class="ni ni-tv-2 text-primary"></i>
@@ -89,6 +101,8 @@
   <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
+
+  @livewireScripts
 </body>
 
 </html>

@@ -15,7 +15,9 @@ class AngajatController extends Controller
      */
     public function index()
     {
-        //
+        $angajati = Angajat::all();
+        return view('angajati')
+            ->with('angajati',$angajati);
     }
 
     /**

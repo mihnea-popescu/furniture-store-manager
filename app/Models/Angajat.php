@@ -10,6 +10,7 @@ class Angajat extends Model
     use HasFactory;
 
     protected $table = "angajati";
+    protected $primaryKey = 'ID_Angajat';
 
     public function comenzi()
     {
@@ -18,6 +19,6 @@ class Angajat extends Model
 
     public function functie()
     {
-        return $this->hasOne(Functie::class);
+        return $this->belongsTo(Functie::class);
     }
 }
