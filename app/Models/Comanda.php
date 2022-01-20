@@ -29,6 +29,6 @@ class Comanda extends Model
 
     public function produse()
     {
-        return $this->belongstoMany(Produs::class,'produse_comenzi');
+        return $this->belongstoMany(Produs::class,'produse_comenzi','ID_Comanda','ID_Produs');
     }
 }

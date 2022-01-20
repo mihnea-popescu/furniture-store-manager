@@ -74,5 +74,5 @@ Route::get('comanda/nou',[ComandaController::class,'nou'])
 Route::post('comanda/nou',[ComandaController::class,'nouCreate'])
     ->name('comanda.create');
     
-Route::get('/comanda/{id}/produse',[ComandaController::class,'produse'])
+Route::get('/comanda-produse/{id}',[ComandaController::class,'produse'])
     ->name('comanda.produse');

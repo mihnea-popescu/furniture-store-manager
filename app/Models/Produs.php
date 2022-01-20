@@ -9,6 +9,8 @@ class Produs extends Model
 {
     use HasFactory;
     protected $table = "Produse";
+    protected $primaryKey = 'ID_Produs';
+    public $timestamps = false;
 
     public function producator()
     {
