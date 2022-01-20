@@ -11,6 +11,7 @@ class Angajat extends Model
 
     protected $table = "angajati";
     protected $primaryKey = 'ID_Angajat';
+    public $timestamps = false;
 
     public function comenzi()
     {

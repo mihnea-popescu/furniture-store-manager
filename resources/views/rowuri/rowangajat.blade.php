@@ -32,7 +32,7 @@
           <i class="fas fa-ellipsis-v"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-          <a class="dropdown-item" href="#">Edit</a>
+          <a class="dropdown-item" href="{{ route('angajat.edit',['id'=>$row->ID_Angajat]) }}">Edit</a>
           <a class="dropdown-item" href="#" wire:click.prevent="delete({{ $row->ID_Angajat }})">Delete</a>
         </div>
       </div>

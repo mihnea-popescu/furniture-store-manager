@@ -20,3 +20,16 @@ Route::get('/', function () {
 
 Route::get('angajati',[AngajatController::class,'index'])
     ->name('angajati');
+
+Route::get('/angajat/{id}',[AngajatController::class,'showEdit'])
+    ->where('id','[0-9]+')
+    ->name('angajat.edit');
+
+Route::post('/angajat',[AngajatController::class,'postEdit'])
+    ->name('angajat.submit');
+
+Route::get('angajat/nou',[AngajatController::class,'nou'])
+    ->name('angajat.new');
+
+Route::post('/angajat/nou',[AngajatController::class,'nouCreate'])
+    ->name('angajat.create');

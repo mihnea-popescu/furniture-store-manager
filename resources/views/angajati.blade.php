@@ -8,12 +8,14 @@
     <div class="card">
       <!-- Card header -->
       <div class="card-header border-0">
-        <h3 class="mb-0">Table - Angajati</h3>
+        <h3 class="mt-1">Table - Angajati</h3> <a href="{{ route('angajat.new') }}" class="btn btn-sm btn-neutral">Nou</a> 
       </div>
       <!-- Light table -->
       <div class="table-responsive">
         <livewire:angajat-table />
       </div>
+
+      
       <!-- Card footer -->
       {{--
       <div class="card-footer py-4">

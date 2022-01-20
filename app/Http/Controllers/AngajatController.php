@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Angajat;
 use App\Http\Requests\StoreAngajatRequest;
 use App\Http\Requests\UpdateAngajatRequest;
+use Illuminate\Http\Request;
 
 class AngajatController extends Controller
 {
@@ -84,5 +85,70 @@ class AngajatController extends Controller
     public function destroy(Angajat $angajat)
     {
         //
+    }
+
+    public function showEdit($id) {
+        $angajat = Angajat::find($id);
+        if(!$angajat) return abort(404);
+
+        return view('modal.editangajat')
+            ->with('angajat',$angajat);
+
+    }
+
+    public function postEdit(Request $request) {
+        $request->validate([
+            'nume' => ['string','max:40','min:3','required'],
+            'email' => ['email','required'],
+            'telefon' => ['string','max:15','min:7','required'],
+            'data-angajare' => ['date','required'],
+            'lucreaza-pentru' => ['integer','required','nullable'],
+            'functie' => ['required','exists:functii,ID_Functie']
+        ]);
+
+        $angajat = Angajat::find($request->input('Angajat_ID'));
+
+        $angajat->Nume = $request->input('nume');
+        $angajat->Email = $request->email;
+        $angajat->Telefon = $request->telefon;
+        $angajat->Data_Angajare = $request->date('data-angajare');
+        $angajat->Lucreaza_Pentru = $request->input('lucreaza-pentru');
+        $angajat->ID_Functie = $request->functie;
+
+        $angajat->save();
+
+        return back()
+            ->with('angajat',$angajat)
+            ->with('success','Modificarile tale au fost efectuate cu succes.');
+    }
+
+    public function nou() {
+        return view('create.angajat');
+    }
+
+    public function nouCreate(Request $request) {
+        $request->validate([
+            'nume' => ['string','max:40','min:3','required'],
+            'email' => ['email','required'],
+            'telefon' => ['string','max:15','min:7','required'],
+            'data-angajare' => ['date','required'],
+            'lucreaza-pentru' => ['integer','required','nullable'],
+            'functie' => ['required','exists:functii,ID_Functie']
+        ]);
+
+        $angajat = new Angajat;
+
+        $angajat->Nume = $request->input('nume');
+        $angajat->Email = $request->email;
+        $angajat->Telefon = $request->telefon;
+        $angajat->Data_Angajare = $request->date('data-angajare');
+        $angajat->Lucreaza_Pentru = $request->input('lucreaza-pentru');
+        $angajat->ID_Functie = $request->functie;
+
+        $angajat->save();
+
+        return back()
+            ->with('angajat',$angajat)
+            ->with('success','Modificarile tale au fost efectuate cu succes. Angajatul cu ID #'.$angajat->ID_Angajat.' a fost creeat.');
     }
 }
