@@ -51,6 +51,12 @@
                 <span class="nav-link-text">Clienti</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('comenzi') }}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Comenzi</span>
+              </a>
+            </li>
           </ul>
          
         </div>

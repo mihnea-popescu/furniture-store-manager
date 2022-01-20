@@ -9,6 +9,8 @@ class Comanda extends Model
 {
     use HasFactory;
     protected $table = "Comenzi";
+    protected $primaryKey = 'ID_Comanda';
+    public $timestamps = false;
 
     public function angajat()
     {

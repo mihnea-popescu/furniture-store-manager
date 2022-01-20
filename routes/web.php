@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AngajatController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ComandaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//
+
 Route::get('angajati',[AngajatController::class,'index'])
     ->name('angajati');
 
@@ -35,6 +38,8 @@ Route::get('angajat/nou',[AngajatController::class,'nou'])
 Route::post('/angajat/nou',[AngajatController::class,'nouCreate'])
     ->name('angajat.create');
 
+//
+
 Route::get('clienti', [ClientController::class,'index'])
     ->name('clienti');
 
@@ -50,3 +55,24 @@ Route::get('client/nou',[ClientController::class,'nou'])
 
 Route::post('client/nou',[ClientController::class,'nouCreate'])
     ->name('client.create');
+
+//
+
+Route::get('comenzi', [ComandaController::class,'index'])
+    ->name('comenzi');
+
+Route::get('/comanda/{id}',[ComandaController::class,'showEdit'])
+    ->where('id','[0-9]+')
+    ->name('comanda.edit');
+
+Route::post('/comanda',[ComandaController::class,'postEdit'])
+    ->name('comanda.submit');
+
+Route::get('comanda/nou',[ComandaController::class,'nou'])
+    ->name('comanda.new');
+
+Route::post('comanda/nou',[ComandaController::class,'nouCreate'])
+    ->name('comanda.create');
+    
+Route::get('/comanda/{id}/produse',[ComandaController::class,'produse'])
+    ->name('comanda.produse');

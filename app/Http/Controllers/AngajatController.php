@@ -149,6 +149,6 @@ class AngajatController extends Controller
 
         return back()
             ->with('angajat',$angajat)
-            ->with('success','Modificarile tale au fost efectuate cu succes. Angajatul cu ID #'.$angajat->ID_Angajat.' a fost creeat.');
+            ->with('success','Modificarile tale au fost efectuate cu succes. Angajatul cu ID #'.$angajat->ID_Angajat.' a fost creat.');
     }
 }
