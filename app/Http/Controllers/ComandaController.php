@@ -153,4 +153,14 @@ class ComandaController extends Controller
             ->with('comanda',$comanda)
             ->with('success','Modificarile tale au fost efectuate cu succes. A fost creata comanda cu ID #'.$comanda->ID_Comanda);
     }
+
+    public function produse($id) {
+        $comanda = Comanda::find($id);
+
+        $produse = $comanda->produse();
+
+        return view('produse-comanda')
+            ->with('comanda',$comanda)
+            ->with('produse',$produse);
+    }
 }
