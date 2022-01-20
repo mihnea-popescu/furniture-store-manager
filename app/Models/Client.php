@@ -9,6 +9,8 @@ class Client extends Model
 {
     use HasFactory;
     protected $table = "Clienti";
+    protected $primaryKey = 'ID_Client';
+    public $timestamps = false;
 
     public function comenzi()
     {

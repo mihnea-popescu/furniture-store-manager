@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AngajatController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,19 @@ Route::get('angajat/nou',[AngajatController::class,'nou'])
 
 Route::post('/angajat/nou',[AngajatController::class,'nouCreate'])
     ->name('angajat.create');
+
+Route::get('clienti', [ClientController::class,'index'])
+    ->name('clienti');
+
+Route::get('/client/{id}',[ClientController::class,'showEdit'])
+    ->where('id','[0-9]+')
+    ->name('client.edit');
+
+Route::post('/client',[ClientController::class,'postEdit'])
+    ->name('client.submit');
+
+Route::get('client/nou',[ClientController::class,'nou'])
+    ->name('client.new');
+
+Route::post('client/nou',[ClientController::class,'nouCreate'])
+    ->name('client.create');

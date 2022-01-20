@@ -1,5 +1,5 @@
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->ID_Angajat }}
+    {{ $row->ID_Client }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
@@ -7,23 +7,23 @@
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
+    {{ $row->Adresa_Default }}
+</x-livewire-tables::bs4.table.cell>
+
+<x-livewire-tables::bs4.table.cell>
+    {{ $row->Inregistrat_La }}
+</x-livewire-tables::bs4.table.cell>
+
+<x-livewire-tables::bs4.table.cell>
     {{ $row->Email }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->Telefon }}
+    {{ $row->Nr_Telefon }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->Data_Angajare }}
-</x-livewire-tables::bs4.table.cell>
-
-<x-livewire-tables::bs4.table.cell>
-    {{ $row->Lucreaza_Pentru }}
-</x-livewire-tables::bs4.table.cell>
-
-<x-livewire-tables::bs4.table.cell>
-    {{ $row->ID_Functie }}
+    {{ $row->Accepta_Marketing }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
@@ -32,8 +32,8 @@
           <i class="fas fa-ellipsis-v"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-          <a class="dropdown-item" href="{{ route('angajat.edit',['id'=>$row->ID_Angajat]) }}">Editeaza</a>
-          <a class="dropdown-item" href="#" wire:click.prevent="delete({{ $row->ID_Angajat }})">Sterge</a>
+          <a class="dropdown-item" href="{{ route('client.edit',['id'=>$row->ID_Client]) }}">Editeaza</a>
+          <a class="dropdown-item" href="#" wire:click.prevent="delete({{ $row->ID_Client }})">Sterge</a>
         </div>
       </div>
 </x-livewire-tables::bs4.table.cell>

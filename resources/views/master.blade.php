@@ -46,7 +46,7 @@
             </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">
+              <a class="nav-link" href="{{ route('clienti') }}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Clienti</span>
               </a>
