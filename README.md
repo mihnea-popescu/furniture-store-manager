@@ -22,6 +22,7 @@
 
 <h4> Ce foloseste acest proiect? </h4>
 <ul>
+<li> Argon Dashboard by Creative Tim</li>
 <li> laravel/laravel</li>
 <li> livewire/livewire</li>
 <li> rappasoft/laravel-livewire-tables</li>
