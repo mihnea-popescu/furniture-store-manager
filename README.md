@@ -33,3 +33,6 @@
 <p> Constrangerile on delete set null nu sunt facute.</p>
 <p> Diagrama conceptuala este realizata cu ajutorul aplicatiei MySQL Workbench. Tutorial gasiti <a href="https://medium.com/@tushar0618/how-to-create-er-diagram-of-a-database-in-mysql-workbench-209fbf63fd03">aici</a>.</p>
 <p> Baza de date utilizata in proiectul final este backup-db/backup16_01_2.sql. Am facut cateva modificari ce nu sunt prezente in migratii.</p>
+
+## Demo
+<h3> <a href="https://proiect-bd.herokuapp.com/">Click</a> </h3>
