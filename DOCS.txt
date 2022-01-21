@@ -1,5 +1,0 @@
-Host 	pei17y9c5bpuh987.chr7pe7iynqr.eu-west-1.rds.amazonaws.com 	
-Username 	hzowuk8wigk4eoyl 	
-Password 	i29chxhoet6ja4au 	
-Port 	3306 	
-Database 	xny9rtikkuvbljbd
