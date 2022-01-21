@@ -57,6 +57,18 @@
                 <span class="nav-link-text">Comenzi</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('cerinta3') }}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Cerinta 3</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('cerinta4') }}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Cerinta 4</span>
+              </a>
+            </li>
           </ul>
          
         </div>

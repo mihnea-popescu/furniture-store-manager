@@ -76,3 +76,15 @@ Route::post('comanda/nou',[ComandaController::class,'nouCreate'])
     
 Route::get('/comanda-produse/{id}',[ComandaController::class,'produse'])
     ->name('comanda.produse');
+
+//cerinta 3
+
+Route::get('cerinta3',function() {
+    return view('cerinta3');
+})->name('cerinta3');
+
+//cerinta 4
+
+Route::get('cerinta4', function() {
+    return view('cerinta4');
+})->name('cerinta4');
